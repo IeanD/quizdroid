@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="topic2_numberOfQuestions">4</string>
+
+    <string name="topic2_question1_question">What was Newton\'s first law?</string>
+    <string name="topic2_question1_answer1">The law of motion</string>
+    <string name="topic2_question1_answer2">The law of gravity</string>
+    <string name="topic2_question1_answer3">The law of movement</string>
+    <string name="topic2_question1_answer4">The law of order</string>
+    <string name="topic2_question1_correctAnswer">The law of motion</string>
+
+    <string name="topic2_question2_question">What is the force that opposes the relative motion of two bodies that are in contact?</string>
+    <string name="topic2_question2_answer1">Normal force</string>
+    <string name="topic2_question2_answer2">Magnetism</string>
+    <string name="topic2_question2_answer3">Friction</string>
+    <string name="topic2_question2_answer4">Girth</string>
+    <string name="topic2_question2_correctAnswer">Friction</string>
+
+    <string name="topic2_question3_question">The discovery of which law provoked the surprised cry "Eureka!"?</string>
+    <string name="topic2_question3_answer1">The law of Gravity</string>
+    <string name="topic2_question3_answer2">Newton\'s 4th Law</string>
+    <string name="topic2_question3_answer3">The law of Relativity</string>
+    <string name="topic2_question3_answer4">Archimedes Principle</string>
+    <string name="topic2_question3_correctAnswer">Archimedes Principle</string>
+
+    <string name="topic2_question4_question">Magnets — How do they work?</string>
+    <string name="topic2_question4_answer1">Magic</string>
+    <string name="topic2_question4_answer2">The interaction between electrons of opposite charge</string>
+    <string name="topic2_question4_answer3">Friction</string>
+    <string name="topic2_question4_answer4">Electricity</string>
+    <string name="topic2_question4_correctAnswer">The interaction between electrons of opposite charge</string>
+</resources>

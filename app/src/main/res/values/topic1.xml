@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="topic1_numberOfQuestions">4</string>
+
+    <string name="topic1_question1_question">Sine, cosine, and what?</string>
+    <string name="topic1_question1_answer1">Quotient</string>
+    <string name="topic1_question1_answer2">Tangent</string>
+    <string name="topic1_question1_answer3">Agent</string>
+    <string name="topic1_question1_answer4">Potient</string>
+    <string name="topic1_question1_correctAnswer">Tangent</string>
+
+    <string name="topic1_question2_question">36 * 7?</string>
+    <string name="topic1_question2_answer1">256</string>
+    <string name="topic1_question2_answer2">264</string>
+    <string name="topic1_question2_answer3">246</string>
+    <string name="topic1_question2_answer4">252</string>
+    <string name="topic1_question2_correctAnswer">252</string>
+
+    <string name="topic1_question3_question">9 + 9 / 3</string>
+    <string name="topic1_question3_answer1">6</string>
+    <string name="topic1_question3_answer2">12</string>
+    <string name="topic1_question3_answer3">9</string>
+    <string name="topic1_question3_answer4">15</string>
+    <string name="topic1_question3_correctAnswer">12</string>
+
+    <string name="topic1_question4_question">2^8?</string>
+    <string name="topic1_question4_answer1">128</string>
+    <string name="topic1_question4_answer2">256</string>
+    <string name="topic1_question4_answer3">512</string>
+    <string name="topic1_question4_answer4">1024</string>
+    <string name="topic1_question4_correctAnswer">256</string>
+</resources>
