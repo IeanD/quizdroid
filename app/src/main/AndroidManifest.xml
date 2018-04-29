@@ -22,7 +22,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SummaryActivity" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".AnswerActivity" />
+        <activity android:name=".ControllerActivity"></activity>
     </application>
 
 </manifest>

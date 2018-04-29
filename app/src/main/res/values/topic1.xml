@@ -16,7 +16,7 @@
     <string name="topic1_question2_answer4">252</string>
     <string name="topic1_question2_correctAnswer">252</string>
 
-    <string name="topic1_question3_question">9 + 9 / 3</string>
+    <string name="topic1_question3_question">Solve 9 + 9 / 3</string>
     <string name="topic1_question3_answer1">6</string>
     <string name="topic1_question3_answer2">12</string>
     <string name="topic1_question3_answer3">9</string>
