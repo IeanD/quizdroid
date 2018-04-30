@@ -20,6 +20,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="34dp"
             android:text="@string/text_answer_givenAnswer"
+            android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +33,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="34dp"
             android:text="@string/text_answer_correctAnswer"
+            android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_answerFragment_givenAnswer" />

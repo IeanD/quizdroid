@@ -23,7 +23,7 @@ class AnswerFragment : Fragment() {
     private var correctAnswer: String? = null
     private var totalCorrectAnswers: String? = null
     private var currQuestionNum: String? = null
-    private var _quizData: HashMap<String, String>? = null
+    private var _quizData: Topic? = null
     private var listener: OnContinueBtnClickedListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,7 +58,7 @@ class AnswerFragment : Fragment() {
 
         // Change text to 'finish' if quiz finished
         val continueBtn: Button = view.findViewById(R.id.button_answerFragment_continue)
-        val totalNumQuestions: String? = _quizData?.get("numQuestions")
+        val totalNumQuestions: String? = _quizData?.getQuestions()?.count().toString()
         if (currQuestionNum == totalNumQuestions) {
             continueBtn.text = getString(R.string.button_answer_finishQuiz)
         }
@@ -92,7 +92,7 @@ class AnswerFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(givenAnswer: String, correctAnswer: String, totalCorrectAnswers: String,
-                        currQuestionNum: String, quizData: HashMap<String, String>) =
+                        currQuestionNum: String, quizData: Topic) =
                 AnswerFragment().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, givenAnswer)
