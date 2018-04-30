@@ -14,7 +14,9 @@ class TopicRepository : ITopicRepository {
     }
 
     init {
-        val topic1 = Topic("Math", "A series of questions that will test your mathematical intuition.")
+        val topic1 = Topic("Math",
+                "A series of questions that will test your mathematical intuition.",
+                "Trivia and tricky equations.")
         topic1.addQuestion(Quiz(
                 "Sine, cosine, and what?",
                 "Quotient",
@@ -47,7 +49,9 @@ class TopicRepository : ITopicRepository {
                 "1024",
                 2
         ))
-        val topic2 = Topic("Physics", "How well do you and gravity get along? Let's find out!")
+        val topic2 = Topic("Physics",
+                "How well do you and gravity get along? Let's find out!",
+                "Theories, laws & Physics history")
         topic2.addQuestion(Quiz(
                 "What was Newton's first law?",
                 "The law of motion",
@@ -80,7 +84,9 @@ class TopicRepository : ITopicRepository {
                 "Electricity",
                 2
         ))
-        val topic3 = Topic("Marvel Super Heroes", "Feel like you could assemble all the Avengers? Let's see what kind of Nick Fury you make.")
+        val topic3 = Topic("Marvel Super Heroes",
+                "Feel like you could assemble all the Avengers? Let's see what kind of Nick Fury you make.",
+                "MCU & Marvel Comics trivia")
         topic3.addQuestion(Quiz(
                 "What powers Iron Man's suit?",
                 "He was bit by a robot",
@@ -113,7 +119,9 @@ class TopicRepository : ITopicRepository {
                 "53",
                 1
         ))
-        val topic4 = Topic("Greek Mythology", "How well do you know the classic of Greece and Rome? This category will stress your knowledge of the ancient world.")
+        val topic4 = Topic("Greek Mythology",
+                "How well do you know the classic of Greece and Rome? This category will stress your knowledge of the ancient world.",
+                "Tales of Gods & Mortals")
         topic4.addQuestion(Quiz(
                 "What was Odysseus' wife's name?",
                 "Persephone",

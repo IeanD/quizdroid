@@ -1,6 +1,6 @@
 package edu.washington.ieand.quizdroid
 
-class Topic(val topicTitle: String, val topicDescription: String) {
+class Topic(val topicTitle: String, val topicDescription: String, val topicShortDescription: String) {
     private var _topicQuestions = mutableListOf<Quiz>()
 
     fun addQuestion(newQuestion: Quiz): Boolean {
