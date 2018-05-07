@@ -1,12 +1,26 @@
 <resources>
     <string name="app_name">QuizDroid</string>
 
+    <!-- MainV2Activity Strings -->
+
     <string name="text_overview_heading">Pick a Category</string>
+
+    <!-- PreferencesActivity Strings -->
+
+    <string name="text_preferences_urlInput">Absolute URL of questions.json</string>
+    <string name="text_preferences_timeInput">Number of minutes between refreshes</string>
+    <string name="button_preferences_submit">SAVE</string>
+    <string name="text_preferences_defaultUrlInfo">Defaults to http://tednewardsandbox.site44.com/questions.json</string>
+    <string name="text_preferences_suggestedUrl">Try entering \"https://api.myjson.com/bins/trcoa.json\"!</string>
+
+    <!-- TopicFragment strings -->
 
     <string name="text_topic_title">TOPIC_TITLE</string>
     <string name="text_topic_description">TOPIC_DESCRIPTION</string>
     <string name="text_topic_numQuestions">NUM_QUESTIONS</string>
     <string name="button_topic_startQuiz">Begin</string>
+
+    <!-- QuizFragment Strings -->
 
     <string name="text_quiz_question">QUESTION</string>
     <string name="radioButton_quiz_answer1">ANSWER_1</string>
@@ -15,16 +29,29 @@
     <string name="radioButton_quiz_answer4">ANSWER_4</string>
     <string name="button_quiz_submitAnswer">Submit</string>
 
+    <!-- AnswerFragment Strings -->
+
     <string name="text_answer_givenAnswer">GIVEN_ANSWER</string>
     <string name="text_answer_correctAnswer">CORRECT_ANSWER</string>
     <string name="text_answer_score">CURRENT_SCORE</string>
     <string name="button_answer_nextQuestion">Next</string>
     <string name="button_answer_finishQuiz">Finish</string>
 
-    <!-- Old stuff -->
+    <!-- Shared Preferences Keys -->
+
+    <string name="sharedPrefs_storedTopicData">QUIZDROID_STORED_TOPIC_DATA</string>
+    <string name="sharedPrefs_storedUserPrefs_url">QUIZDROID_STORED_USER_PREFERENCES_URL</string>
+    <string name="sharedPrefs_storedUserPrefs_refresh">QUIZDROID_STORED_USER_PREFERENCES_REFRESH</string>
+
+    <!-- DEPRECATED -->
 
     <string name="button_nextQuestion">DEPRECATED</string>
     <string name="button_submitAnswer">DEPRECATED</string>
     <string name="button_startQuiz">DEPRECATED</string>
     <string name="title_activity_summary">DEPRECATED</string>
+
+    <!-- Added by Android Studio -->
+
+    <string name="title_activity_main_v2">MainV2Activity</string>
+    <string name="title_activity_preferences">Preferences</string>
 </resources>

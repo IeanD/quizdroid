@@ -6,11 +6,11 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 //import android.widget.Toast
 
-class ControllerActivity : AppCompatActivity(), TopicFragment.OnBeginBtnPressedListener,
+class ControllerActivity : AppCompatActivity(), TopicFragment.OnBeginBtnClickedListener,
         QuizFragment.OnQuizSubmitBtnClickListener, AnswerFragment.OnContinueBtnClickedListener {
 
     private lateinit var currTopicName: String
-    private lateinit var currTopicData: Topic
+    private lateinit var currTopicData: TopicData
     private var currQuestionNumber = 0
     private var numCorrectAnswers = 0
     private val instance = QuizApp.getSingletonInstance()
@@ -36,7 +36,7 @@ class ControllerActivity : AppCompatActivity(), TopicFragment.OnBeginBtnPressedL
         }
     }
 
-    override fun onBeginBtnPressed() {
+    override fun onBeginBtnClicked() {
         currQuestionNumber++
 
         val fragment: Fragment? = QuizFragment.newInstance(currQuestionNumber.toString(), currTopicData)
@@ -50,9 +50,6 @@ class ControllerActivity : AppCompatActivity(), TopicFragment.OnBeginBtnPressedL
             numCorrectAnswers++
         }
 
-//        val toast = Toast.makeText(this, chosenAnswer, Toast.LENGTH_SHORT)
-//        toast.show()
-
         val fragment: Fragment? = AnswerFragment.newInstance(chosenAnswer as String, correctAnswer as String,
                 numCorrectAnswers.toString(), currQuestionNumber.toString(), currTopicData)
         val ft = fragmentManager.beginTransaction()
@@ -61,12 +58,12 @@ class ControllerActivity : AppCompatActivity(), TopicFragment.OnBeginBtnPressedL
     }
 
     override fun onContinueBtnClicked() {
-        val totalNumQuestions = currTopicData.getQuestions().count().toString()
-        if (currQuestionNumber.toString() == totalNumQuestions) {
-            val intent = Intent(this, MainActivity::class.java)
+        val totalNumQuestions = currTopicData.questions?.count() // currTopicData.getQuestions().count().toString()
+        if (currQuestionNumber.toString() == totalNumQuestions.toString()) {
+            val intent = Intent(this, MainV2Activity::class.java)
             startActivity(intent)
         } else {
-            onBeginBtnPressed()
+            onBeginBtnClicked()
         }
     }
 

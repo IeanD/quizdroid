@@ -13,8 +13,8 @@ private const val ARG_PARAM1 = "currTopicName"
 
 class TopicFragment : Fragment() {
     private var currTopicName: String? = null
-    private var _quizData: Topic? = null
-    private var listener: OnBeginBtnPressedListener? = null
+    private var _quizData: TopicData? = null
+    private var listener: OnBeginBtnClickedListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,22 +36,24 @@ class TopicFragment : Fragment() {
         val topicHeading: TextView = view.findViewById(R.id.textView_topicFragment_topicHeading)
         topicHeading.text = currTopicName
         val topicDescription: TextView = view.findViewById(R.id.textView_topicFragment_topicDescription)
-        topicDescription.text = _quizData?.topicDescription ?: "TOPIC_DESCRIPTION"
+        topicDescription.text = _quizData?.desc ?: "TOPIC_DESCRIPTION"
+//        topicDescription.text = _quizData?.topicDescription ?: "TOPIC_DESCRIPTION"
         val numQuestions: TextView = view.findViewById(R.id.textView_topicFragment_numQuestions)
-        val numQuestionsAmt: String = _quizData?.getQuestions()?.count().toString()
+        val numQuestionsAmt: String = _quizData?.questions?.count().toString()
+//        val numQuestionsAmt: String = _quizData?.getQuestions()?.count().toString()
         val numQuestionsText = "Number of Questions: $numQuestionsAmt"
         numQuestions.text = numQuestionsText
 
         // Set button listener
         val beginBtn: Button = view.findViewById(R.id.button_topicFragment_startQuiz)
         beginBtn.setOnClickListener {
-            listener?.onBeginBtnPressed()
+            listener?.onBeginBtnClicked()
         }
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnBeginBtnPressedListener) {
+        if (context is OnBeginBtnClickedListener) {
             listener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
@@ -64,13 +66,13 @@ class TopicFragment : Fragment() {
         _quizData = null
     }
 
-    interface OnBeginBtnPressedListener {
-        fun onBeginBtnPressed()
+    interface OnBeginBtnClickedListener {
+        fun onBeginBtnClicked()
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, quizData: Topic) =
+        fun newInstance(param1: String, quizData: TopicData) =
             TopicFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
