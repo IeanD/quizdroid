@@ -65,11 +65,12 @@ class MainV2Activity : AppCompatActivity() {
             }
         }
 
+        // Show a Toast telling the user the current saved URL and timeout
         val nextUrl = sharedPref.getString(getString(R.string.sharedPrefs_storedUserPrefs_url), "ERROR")
         val nextTimeout = sharedPref.getString(getString(R.string.sharedPrefs_storedUserPrefs_refresh), "5")
-
         Toast.makeText(this, "The quiz data will be refreshed from $nextUrl in $nextTimeout minutes!", Toast.LENGTH_SHORT).show()
 
+        // Start by checking the network status
         beginNetworkCheck()
     }
 
@@ -147,10 +148,13 @@ class MainV2Activity : AppCompatActivity() {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
 
         // Check if there's an internet connection.
-        if (networkIsAvailable()) { // IF INTERNET AVAILABLE
+        if (networkIsAvailable()) {
+            // Start the background service for downloading JSON
             val jsonUrl = sharedPref.getString(getString(R.string.sharedPrefs_storedUserPrefs_url), "DEFAULT")
             val timeout = sharedPref.getString(getString(R.string.sharedPrefs_storedUserPrefs_refresh), "5").toInt()
             downloadJson(jsonUrl, timeout)
+
+            // Update the UI
             tryToBuildUi()
         }
         else {
