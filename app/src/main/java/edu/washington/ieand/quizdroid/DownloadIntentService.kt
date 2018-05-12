@@ -15,25 +15,24 @@ class DownloadIntentService : IntentService(TAG) {
         val reply = intent!!.getParcelableExtra<PendingIntent>(PENDING_RESULT_EXTRA)
         try {
             try {
-                val url = URL(intent.getStringExtra(URL_EXTRA)).readText()
-
+                val url = URL(intent?.getStringExtra(URL_EXTRA)).readText()
+                Log.i(TAG, url)
                 val result = Intent()
                 result.putExtra(URL_RESULT_EXTRA, url)
-
+//
                 reply.send(this, RESULT_CODE, result)
             } catch (exc: MalformedURLException) {
                 reply.send(INVALID_URL_CODE)
-                Log.i(TAG, exc.toString())
+                Log.i(TAG, "DIT.kt, ln26: " + exc.toString())
 
             } catch (exc: Exception) {
                 reply.send(ERROR_CODE)
-                Log.i(TAG, exc.toString())
+                Log.i(TAG, "DIT.kt, ln 30: " + exc.toString())
             }
 
         } catch (exc: PendingIntent.CanceledException) {
             Log.i(TAG, "reply cancelled", exc)
         }
-
     }
 
     companion object {

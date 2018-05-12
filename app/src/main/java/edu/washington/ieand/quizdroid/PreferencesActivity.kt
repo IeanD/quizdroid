@@ -41,8 +41,8 @@ class PreferencesActivity : AppCompatActivity() {
                 checksHavePassed = false
             }
 
-            if (givenRefreshTime.toInt() < 5) {
-                val toast = Toast.makeText(this, "Error: Please give at least 5 minutes between refreshes.", Toast.LENGTH_SHORT)
+            if (givenRefreshTime.toInt() < 1) {
+                val toast = Toast.makeText(this, "Error: Please give at least 1 minute between refreshes.", Toast.LENGTH_SHORT)
                 toast.show()
             }
 
